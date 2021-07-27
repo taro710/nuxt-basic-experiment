@@ -1,19 +1,15 @@
-<template>
-  <div>
-    <h1>watch → watch, watchEffectを使用</h1>
-    <h2>-----------------------------------------------------</h2>
-    <form @submit.prevent>
-      <div>
-        <label for="name">お名前</label>
-        <input id="name" v-model="form.name" type="text" />
-      </div>
-      <div>
-        <label for="email">email</label>
-        <input id="email" v-model="form.email" type="text" />
-      </div>
-    </form>
-    <h2>-----------------------------------------------------</h2>
-  </div>
+<template lang="pug">
+  div
+    h1 watch → watch, watchEffectを使用
+    h2 -----------------------------------------------------
+    form(@submit.prevent)
+      div
+        label(for="name") お名前
+        input(id="name" v-model="form.name" type="text")
+      div
+        label(for="email") email
+        input(id="email" v-model="form.email" type="text")
+    h2 -----------------------------------------------------
 </template>
 
 <script lang="js">

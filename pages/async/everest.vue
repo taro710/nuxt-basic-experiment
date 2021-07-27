@@ -1,8 +1,7 @@
-<template>
-  <div>
-    <MountainData v-if="data" :data="data" />
-    <nuxt-link to="/" class="BackToHome">Back to Home</nuxt-link>
-  </div>
+<template lang="pug">
+  div
+    MountainData(v-if="data" :data="data")
+    nuxt-link(to="/" class="BackToHome") Back to Home
 </template>
 
 <script>
@@ -11,18 +10,18 @@ import {
   useContext,
   useStatic,
   computed,
-} from "@nuxtjs/composition-api";
+} from '@nuxtjs/composition-api';
 
 const Everest = defineComponent({
   setup() {
-    const param = computed(() => "everest");
+    const param = computed(() => 'everest');
     const { $http } = useContext();
     const data = useStatic(
       async (param, key) => {
         return await $http.$get(`https://api.nuxtjs.dev/mountains/${key}`);
       },
       param,
-      "mount"
+      'mount'
     );
     return { data };
   },

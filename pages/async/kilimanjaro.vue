@@ -1,8 +1,7 @@
-<template>
-  <div>
-    <MountainData :data="data" />
-    <nuxt-link to="/" class="BackToHome">Back to Home</nuxt-link>
-  </div>
+<template lang="pug">
+  div
+    MountainData(:data="data")
+    nuxt-link(to="/" class="BackToHome") Back to Home
 </template>
 
 <script>

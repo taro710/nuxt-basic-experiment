@@ -1,15 +1,14 @@
-<template>
-  <div>
-    <MountainData v-if="data" :data="data" />
-    <nuxt-link to="/" class="BackToHome">Back to Home</nuxt-link>
-  </div>
+<template lang="pug">
+  div
+    MountainData(v-if="data" :data="data")
+    nuxt-link(to="/" class="BackToHome") Back to Home
 </template>
 
 <script>
 export default {
-  name: "Aconcagua",
+  name: 'Aconcagua',
   async asyncData({ $http }) {
-    console.log("asyncData");
+    console.log('asyncData');
     const result = await $http.$get(
       `https://api.nuxtjs.dev/mountains/aconcagua`
     );

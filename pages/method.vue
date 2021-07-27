@@ -1,24 +1,18 @@
-<template>
-  <div>
-    <h1>methods → 普通の関数定義でOK</h1>
-    <h2>-----------------------------------------------------</h2>
-    <form @submit.prevent>
-      <div>
-        <label for="name">お名前</label>
-        <input id="name" type="text" v-model="data.form.name" />
-      </div>
-      <div>
-        <button @click="addUser">ユーザー追加</button>
-      </div>
-    </form>
-    <div style="margin-top: 16px">
-      <p>ユーザー件数: {{ userNum }}</p>
-      <ul>
-        <li v-for="u in data.users" :key="u.id">{{ u.id }} {{ u.name }}</li>
-      </ul>
-    </div>
-    <h2>-----------------------------------------------------</h2>
-  </div>
+<template lang="pug">
+  div
+    h1 methods → 普通の関数定義でOK
+    h2 -----------------------------------------------------
+    form(@submit.prevent)
+      div
+        label(for="name") お名前
+        input(id="name" type="text" v-model="data.form.name")
+      div
+        button(@click="addUser") ユーザー追加
+    div(style="margin-top: 16px")
+      p ユーザー件数: {{ userNum }}
+      ul
+        li(v-for="u in data.users" :key="u.id") {{ u.id }} {{ u.name }}
+    h2 -----------------------------------------------------
 </template>
 
 <script lang="js">

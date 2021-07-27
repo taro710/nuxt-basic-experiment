@@ -1,11 +1,9 @@
-<template>
-  <div>
-    <MountainData v-if="data" :data="data" />
-    <p>
-      <button @click="$fetch">ReFetch</button>
-    </p>
-    <nuxt-link to="/" class="BackToHome">Back to Home</nuxt-link>
-  </div>
+<template lang="pug">
+  div
+    MountainData(v-if="data" :data="data")
+    p
+      button(@click="$fetch") ReFetch
+    nuxt-link(to="/" class="BackToHome") Back to Home
 </template>
 
 <script>

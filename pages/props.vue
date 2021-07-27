@@ -1,10 +1,9 @@
-<template>
-  <div>
-    <h1>props → 変わらずpropsを使用</h1>
-    <h2>-----------------------------------------------------</h2>
-    <UserList :users="data.users" />
-    <h2>-----------------------------------------------------</h2>
-  </div>
+<template lang="pug">
+  div
+    h1 props → 変わらずpropsを使用
+    h2 -----------------------------------------------------
+    UserList(:users="data.users")
+    h2 -----------------------------------------------------
 </template>
 
 <script lang="js">
@@ -22,7 +21,7 @@ export default defineComponent({
     })
 
     setTimeout(() => {
-      data.users.push({ id: 4, name: '木下武' })
+      data.users.push({ id: 4, name: 'SHIRO' })
     }, 3000);
 
     return {
