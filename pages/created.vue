@@ -1,8 +1,9 @@
 <template lang="pug">
   div
-    h1 created → 普通の関数呼び出しとして書く（DOM参照不可能）
+    h1 created → 普通の関数呼び出しとして書く
+    p createdはDOMがまだ作られていない状態で、mountedではDOMが作成された直後の状態。つまり、createdのタイミングではDOMの参照は不可能
     h2 -----------------------------------------------------
-    div(style="margin-top: 16px")
+    div
       p ユーザー件数: {{ userNum }}
       ul
         li(v-for="u in data.users" :key="u.id") {{ u.id }} {{ u.name }}

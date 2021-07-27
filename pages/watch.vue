@@ -1,6 +1,7 @@
 <template lang="pug">
   div
     h1 watch → watch, watchEffectを使用
+    p お名前の値はdataと連動している。値を変えた際に何か実行したいとき、watchを使う。ここでは、コンソールに今の値と直前の値を出力させる。
     h2 -----------------------------------------------------
     form(@submit.prevent)
       div

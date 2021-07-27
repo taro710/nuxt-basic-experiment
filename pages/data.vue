@@ -5,6 +5,7 @@
     h3 {{ title }}
     ul
       li(v-for="user in data.users" :key="user.id") {{ user.id }} / {{ user.name }}
+    p {{ message }}
     h2 -----------------------------------------------------
 </template>
 
@@ -13,6 +14,7 @@ import { defineComponent, reactive, ref } from '@nuxtjs/composition-api';
 
 export default defineComponent({
   setup() {
+    const message = ref('※2秒後にユーザーが一人増えます');
     const title = ref('TITLE');
     const data = reactive({
       users: [
@@ -24,10 +26,11 @@ export default defineComponent({
 
     setTimeout(() => {
       data.users.push({ id: 4, name: 'SIRO' });
-      title.value = 'Title';
+      message.value = '※増えました';
     }, 2000);
 
     return {
+      message,
       title,
       data,
     };
