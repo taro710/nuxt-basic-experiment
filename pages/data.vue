@@ -20,18 +20,9 @@ export default defineComponent({
     const title = ref('TITLE');
     const data = reactive({
       users: [
-        {
-          id: 1,
-          name: 'TARO',
-        },
-        {
-          id: 2,
-          name: 'JIRO',
-        },
-        {
-          id: 3,
-          name: 'SABURO',
-        },
+        { id: 1, name: 'TARO' },
+        { id: 2, name: 'JIRO' },
+        { id: 3, name: 'SABURO' },
       ],
     });
 

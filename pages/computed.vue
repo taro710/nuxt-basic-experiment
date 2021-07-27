@@ -14,9 +14,9 @@ export default defineComponent({
   setup() {
     const data = reactive({
       users: [
-        { id: 1, name: '加藤かな' },
-        { id: 2, name: '田中紘一' },
-        { id: 3, name: '山田太郎' },
+        { id: 1, name: 'TARO' },
+        { id: 2, name: 'JIRO' },
+        { id: 3, name: 'SABURO' },
       ],
     })
     const userNum = computed(() => data.users.length)

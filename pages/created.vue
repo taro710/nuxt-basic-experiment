@@ -26,9 +26,9 @@ export default defineComponent({
     // created ... DOMにさわれることが保証されてない。APIからデータ取得する処理などを書く
     setTimeout(() => {
       data.users.push(...[
-        { id: 1, name: '加藤かな' },
-        { id: 2, name: '田中紘一' },
-        { id: 3, name: '山田太郎' },
+        { id: 1, name: 'TARO' },
+        { id: 2, name: 'JIRO' },
+        { id: 3, name: 'SABURO' },
       ])
     }, 3000);
 

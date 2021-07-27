@@ -20,7 +20,7 @@ import { defineComponent, reactive } from '@nuxtjs/composition-api'
 export default defineComponent({
   setup() {
     const form = reactive({
-      name: '山田',
+      name: 'TARO',
     })
 
     return {
