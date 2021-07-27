@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1>methods → 普通の関数定義でOK</h1>
+    <h2>-----------------------------------------------------</h2>
     <form @submit.prevent>
       <div>
         <label for="name">お名前</label>
@@ -15,6 +17,7 @@
         <li v-for="u in data.users" :key="u.id">{{ u.id }} {{ u.name }}</li>
       </ul>
     </div>
+    <h2>-----------------------------------------------------</h2>
   </div>
 </template>
 

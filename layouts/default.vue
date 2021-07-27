@@ -3,34 +3,29 @@
     <Nuxt />
     <br />
     <h3>
-      1つのコンポーネント内での違い data, computed, methods, watch, created,
-      mounted
+      1つのコンポーネント内 data, computed, methods, watch, created, mounted
     </h3>
     <ul>
-      <nuxt-link to="/data">data → ref, reactive</nuxt-link
+      <nuxt-link to="/data">data</nuxt-link
       ><br />
-      <nuxt-link to="/computed">computed → computed</nuxt-link
+      <nuxt-link to="/computed">computed</nuxt-link
       ><br />
-      <nuxt-link to="/method">methods → 普通の関数</nuxt-link
+      <nuxt-link to="/method">methods</nuxt-link
       ><br />
-      <nuxt-link to="/watch">watch → watch, watchEffect </nuxt-link
+      <nuxt-link to="/watch">watch</nuxt-link
       ><br />
-      <nuxt-link to="/created"
-        >created → 普通の関数呼び出しとして書く（DOM参照できない）</nuxt-link
+      <nuxt-link to="/created">created</nuxt-link
       ><br />
-      <nuxt-link to="/mounted">mounted → onMounted（DOM参照可能）</nuxt-link
+      <nuxt-link to="/mounted">mounted</nuxt-link
       ><br />
     </ul>
-    <h3>親子のコンポーネント間の違い - v-model, prop, emit, sync</h3>
+    <h3>親子のコンポーネント間 - v-model, prop, emit, sync</h3>
     <ul>
-      <nuxt-link to="/props">props → props</nuxt-link
+      <nuxt-link to="/props">props</nuxt-link
       ><br />
-      <nuxt-link to="/computed">computed → computed</nuxt-link
+      <nuxt-link to="/vmodel">v-model・this.$emit</nuxt-link
       ><br />
-      <nuxt-link to="/vmodel"
-        >v-model → v-model, this.$emit → context.emit</nuxt-link
-      ><br />
-      <nuxt-link to="/sync">.sync → .sync</nuxt-link
+      <nuxt-link to="/sync">.sync</nuxt-link
       ><br />
     </ul>
   </div>

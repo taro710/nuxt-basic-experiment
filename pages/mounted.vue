@@ -1,11 +1,14 @@
 <template>
   <div>
+    <h1>mounted → onMountedを使用（DOM参照可能）</h1>
+    <h2>-----------------------------------------------------</h2>
     <form @submit.prevent>
       <div>
         <label for="email">email</label>
         <input ref="emailInput" id="email" type="text" />
       </div>
     </form>
+    <h2>-----------------------------------------------------</h2>
   </div>
 </template>
 

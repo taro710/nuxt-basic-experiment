@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1>watch → watch, watchEffectを使用</h1>
+    <h2>-----------------------------------------------------</h2>
     <form @submit.prevent>
       <div>
         <label for="name">お名前</label>
@@ -10,6 +12,7 @@
         <input id="email" v-model="form.email" type="text" />
       </div>
     </form>
+    <h2>-----------------------------------------------------</h2>
   </div>
 </template>
 

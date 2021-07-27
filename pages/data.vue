@@ -1,11 +1,14 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
+    <h1>data → ref, reactiveを使用</h1>
+    <h2>-----------------------------------------------------</h2>
+    <h3>{{ title }}</h3>
     <ul>
       <li v-for="user in data.users" :key="user.id">
         {{ user.id }} / {{ user.name }}
       </li>
     </ul>
+    <h2>-----------------------------------------------------</h2>
   </div>
 </template>
 

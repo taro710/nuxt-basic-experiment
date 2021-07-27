@@ -1,11 +1,14 @@
 <template>
   <div>
+    <h1>created → 普通の関数呼び出しとして書く（DOM参照不可能）</h1>
+    <h2>-----------------------------------------------------</h2>
     <div style="margin-top: 16px">
       <p>ユーザー件数: {{ userNum }}</p>
       <ul>
         <li v-for="u in data.users" :key="u.id">{{ u.id }} {{ u.name }}</li>
       </ul>
     </div>
+    <h2>-----------------------------------------------------</h2>
   </div>
 </template>
 
