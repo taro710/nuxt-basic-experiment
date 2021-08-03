@@ -17,8 +17,8 @@
     h2 -----------------------------------------------------
 </template>
 
-<script lang="js">
-import { defineComponent, reactive, computed, ref } from '@nuxtjs/composition-api'
+<script lang="ts">
+import { defineComponent, reactive, computed } from '@nuxtjs/composition-api';
 
 export default defineComponent({
   setup() {
@@ -31,21 +31,21 @@ export default defineComponent({
         { id: 2, name: 'JIRO' },
         { id: 3, name: 'SABURO' },
       ],
-    })
+    });
 
-    const userNum = computed(() => data.users.length)
+    const userNum = computed(() => data.users.length);
 
     const addUser = () => {
-      const id = Math.max(...data.users.map(u=>u.id)) + 1
-      data.users.push({id: id, name: data.form.name})
-      data.form.name = 'この値はdataと連動している'
-    }
+      const id = Math.max(...data.users.map(u => u.id)) + 1;
+      data.users.push({ id: id, name: data.form.name });
+      data.form.name = 'この値はdataと連動している';
+    };
 
     return {
       data,
       addUser,
       userNum,
-    }
+    };
   },
-})
+});
 </script>

@@ -11,25 +11,25 @@
     h2 -----------------------------------------------------
 </template>
 
-<script lang="js">
-import { defineComponent, reactive, onMounted, ref } from '@nuxtjs/composition-api'
+<script lang="ts">
+import { defineComponent, onMounted, ref } from '@nuxtjs/composition-api';
 
 export default defineComponent({
   setup() {
-    const emailInput = ref(null);
-    const message = ref("まだmountedじゃない");
+    const emailInput = ref();
+    const message = ref('まだmountedじゃない');
 
-    onMounted(()=>{
+    onMounted(() => {
       // composition api以前は this.$refs.emailInputのような形で取得していた
-      emailInput.value.focus() //email欄のDOMを取得して、読み込み時にinputタグ(DOM)にフォーカスが当たるようにしている
-      message.value = "mounted！"
-    })
-    console.info("before mount", emailInput.value)
+      emailInput.value.focus(); //email欄のDOMを取得して、読み込み時にinputタグ(DOM)にフォーカスが当たるようにしている
+      message.value = 'mounted！';
+    });
+    console.info('before mount', emailInput.value);
 
     return {
       emailInput,
-      message
-    }
+      message,
+    };
   },
-})
+});
 </script>

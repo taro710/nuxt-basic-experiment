@@ -10,30 +10,31 @@
     h2 -----------------------------------------------------
 </template>
 
-<script lang="js">
-import { defineComponent, reactive, computed } from '@nuxtjs/composition-api'
+<script lang="ts">
+import { defineComponent, reactive, computed } from '@nuxtjs/composition-api';
 
 export default defineComponent({
   setup() {
     const data = reactive({
-      users: [],
-    })
+      users: [{ id: 1, name: 'TARO' }],
+    });
 
-    const userNum = computed(() => data.users.length)
+    const userNum = computed(() => data.users.length);
 
     // created ... DOMにさわれることが保証されてない。APIからデータ取得する処理などを書く
     setTimeout(() => {
-      data.users.push(...[
-        { id: 1, name: 'TARO' },
-        { id: 2, name: 'JIRO' },
-        { id: 3, name: 'SABURO' },
-      ])
+      data.users.push(
+        ...[
+          { id: 2, name: 'JIRO' },
+          { id: 3, name: 'SABURO' },
+        ]
+      );
     }, 3000);
 
     return {
       data,
       userNum,
-    }
+    };
   },
-})
+});
 </script>

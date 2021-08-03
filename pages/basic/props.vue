@@ -6,9 +6,8 @@
     h2 -----------------------------------------------------親
 </template>
 
-<script lang="js">
-import { defineComponent, reactive,ref } from '@nuxtjs/composition-api'
-
+<script lang="ts">
+import { defineComponent, reactive, ref } from '@nuxtjs/composition-api';
 
 export default defineComponent({
   setup() {
@@ -18,18 +17,18 @@ export default defineComponent({
         { id: 2, name: 'JIRO' },
         { id: 3, name: 'SABURO' },
       ],
-    })
-    const message = ref("※3秒後に一件追加されます");
+    });
+    const message = ref('※3秒後に一件追加されます');
 
     setTimeout(() => {
-      data.users.push({ id: 4, name: 'SHIRO' })
-      message.value = "※一件追加！"
+      data.users.push({ id: 4, name: 'SHIRO' });
+      message.value = '※一件追加！';
     }, 3000);
 
     return {
       message,
-      data
-    }
+      data,
+    };
   },
-})
+});
 </script>
