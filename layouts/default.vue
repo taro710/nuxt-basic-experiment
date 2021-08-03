@@ -6,26 +6,26 @@
       1つのコンポーネント内 data, computed, methods, watch, created, mounted
     </h3>
     <ul>
-      <nuxt-link to="/data">data</nuxt-link
+      <nuxt-link to="/basic/data">data</nuxt-link
       ><br />
-      <nuxt-link to="/computed">computed</nuxt-link
+      <nuxt-link to="/basic/computed">computed</nuxt-link
       ><br />
-      <nuxt-link to="/method">methods</nuxt-link
+      <nuxt-link to="/basic/method">methods</nuxt-link
       ><br />
-      <nuxt-link to="/watch">watch</nuxt-link
+      <nuxt-link to="/basic/watch">watch</nuxt-link
       ><br />
-      <nuxt-link to="/created">created</nuxt-link
+      <nuxt-link to="/basic/created">created</nuxt-link
       ><br />
-      <nuxt-link to="/mounted">mounted</nuxt-link
+      <nuxt-link to="/basic/mounted">mounted</nuxt-link
       ><br />
     </ul>
     <h3>親子のコンポーネント間 - v-model, prop, emit, sync</h3>
     <ul>
-      <nuxt-link to="/props">props</nuxt-link
+      <nuxt-link to="/basic/props">props</nuxt-link
       ><br />
-      <nuxt-link to="/vmodel">v-model・this.$emit</nuxt-link
+      <nuxt-link to="/basic/vmodel">v-model・this.$emit</nuxt-link
       ><br />
-      <nuxt-link to="/sync">.sync</nuxt-link
+      <nuxt-link to="/basic/sync">.sync</nuxt-link
       ><br />
     </ul>
   </div>

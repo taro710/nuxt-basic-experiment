@@ -9,26 +9,30 @@
     h2 -----------------------------------------------------
 </template>
 
-<script lang="js">
-import { defineComponent, reactive, watch } from '@nuxtjs/composition-api'
+<script lang="ts">
+import { defineComponent, reactive, watch } from '@nuxtjs/composition-api';
+import InpuName from '~/components/basic/InputName.vue';
 
 export default defineComponent({
+  component: {
+    InpuName,
+  },
   setup() {
     const form = reactive({
       name: 'TARO',
-    })
+    });
 
     watch(
       () => form.name,
       (currentName, prevName) => {
-        console.info('currentName: ', currentName, 'prevName: ', prevName)
-      },
+        console.info('currentName: ', currentName, 'prevName: ', prevName);
+      }
       //{ deep: true}, //オブジェクトの各プロパティを監視したい場合
-    )
+    );
 
     return {
-      form
-    }
+      form,
+    };
   },
-})
+});
 </script>
